@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E05A4721-61F9-419B-8345-4AFA6CE8707A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WTwitter.Data</RootNamespace>
+    <AssemblyName>WTwitter.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.0.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.0.1\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDbContext.cs" />
+    <Compile Include="Migrations\201406101541383_InitialMigration.cs" />
+    <Compile Include="Migrations\201406101541383_InitialMigration.Designer.cs">
+      <DependentUpon>201406101541383_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406101811495_SecondMigration.cs" />
+    <Compile Include="Migrations\201406101811495_SecondMigration.Designer.cs">
+      <DependentUpon>201406101811495_SecondMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406111931281_update.cs" />
+    <Compile Include="Migrations\201406111931281_update.Designer.cs">
+      <DependentUpon>201406111931281_update.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406120213492_FollowUpdate.cs" />
+    <Compile Include="Migrations\201406120213492_FollowUpdate.Designer.cs">
+      <DependentUpon>201406120213492_FollowUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406121617519_FollowUpdate2.cs" />
+    <Compile Include="Migrations\201406121617519_FollowUpdate2.Designer.cs">
+      <DependentUpon>201406121617519_FollowUpdate2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406121811283_FollowUpdate3.cs" />
+    <Compile Include="Migrations\201406121811283_FollowUpdate3.Designer.cs">
+      <DependentUpon>201406121811283_FollowUpdate3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201406122123589_FollowUpdate4.cs" />
+    <Compile Include="Migrations\201406122123589_FollowUpdate4.Designer.cs">
+      <DependentUpon>201406122123589_FollowUpdate4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WTwitter.Data.Models\WTwitter.Data.Models.csproj">
+      <Project>{55c5210f-2d6a-44e2-8092-fdeefdc195c7}</Project>
+      <Name>WTwitter.Data.Models</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201406101541383_InitialMigration.resx">
+      <DependentUpon>201406101541383_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406101811495_SecondMigration.resx">
+      <DependentUpon>201406101811495_SecondMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406111931281_update.resx">
+      <DependentUpon>201406111931281_update.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406120213492_FollowUpdate.resx">
+      <DependentUpon>201406120213492_FollowUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406121617519_FollowUpdate2.resx">
+      <DependentUpon>201406121617519_FollowUpdate2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406121811283_FollowUpdate3.resx">
+      <DependentUpon>201406121811283_FollowUpdate3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201406122123589_FollowUpdate4.resx">
+      <DependentUpon>201406122123589_FollowUpdate4.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
