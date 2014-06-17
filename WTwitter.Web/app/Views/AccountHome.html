@@ -1,17 +1,12 @@
-﻿<div>
-    Welcome, {{User.FName}}
-</div>
-
+﻿<br />
 <br />
-<br />
-<textarea cols="30" ng-model="Tweet">
-    Write your tweet here
-</textarea>
-<input type="button" ng-click="SubmitTweet()" value="Tweet" class="btn-primary" />
+<textarea cols="30" ng-model="Tweet" placeholder="Write your tweet here" class="well-lg"></textarea>
+<input type="button" ng-click="SubmitTweet()" value="Tweet" class="btn btn-primary" />
 
 <!--Display User List-->
-<div class="navbar-left" style="position:fixed">
-    <span ng-repeat="User in Users">
+<div class="navbar-left">
+    <input type="text" placeholder="Search Users" /><span class="glyphicon glyphicon-search"></span><br />
+    <span ng-repeat="User in Users" class="users">
         {{User.Username}}
         <input type="button" value="Follow" class="btn-success btn-xs" ng-click="Follow(User.Id)" /><br /><br />
     </span>
@@ -25,6 +20,7 @@
 
 </div>
 
+<!--Display Tweets-->
 <div>
     <div ng-repeat="Tweet in Tweets" style="width:300px; min-height:50px" class="well container">
         {{Tweet.Message}}<br />

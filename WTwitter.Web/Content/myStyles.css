@@ -1,0 +1,48 @@
+﻿body {
+    background: radial-gradient(white, #89d7f1)
+}
+
+.textfield {
+    background-color:lightyellow;
+    border-radius:4px;
+    margin:5px;
+}
+
+.well {
+    background-color:white;
+    border-color:black;
+}
+
+.glyph {
+    float:right;
+    margin-right:10px;
+    margin-top:0px;
+    padding-top:0px;
+    font-size:large;
+}
+
+.h2 {
+    font-family:'Source Sans Pro'
+}
+
+.title {
+    font-family: 'Source Sans Pro';
+    font-weight: bolder;
+}
+
+#nav {
+    background-color:white;
+    margin-top:0px;
+}
+
+#custom {
+    float:left;
+    font-size:large;
+    font-family:'Source Sans Pro';
+    color:blue;
+}
+
+.users {
+    font-size: 16px;
+    font-family:'Source Sans Pro';
+}

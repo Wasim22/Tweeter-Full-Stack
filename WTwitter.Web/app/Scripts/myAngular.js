@@ -5,10 +5,10 @@ app.config(['$routeProvider', function ($routeProvider) {
         controller: 'Main',
         templateUrl: 'views/Main.html'
     })
-    .when('/view/:id', {
-        controller: 'ViewTweets',
-        templateUrl: 'views/Tweets.html'
-    })
+    //.when('/view/:id', {
+    //    controller: 'ViewTweets',
+    //    templateUrl: 'views/Tweets.html'
+    //})
     .when('/login', {
         controller: 'LoginPage',
         templateUrl: 'views/Login.html'

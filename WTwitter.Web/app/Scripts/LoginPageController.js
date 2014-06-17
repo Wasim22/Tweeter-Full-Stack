@@ -13,7 +13,7 @@
                 sessionStorage.setItem(0, JSON.stringify(data));
             })
             .error(function () {
-                alert("Not Authorize, bro");
+                alert("Login failed. Try again.");
             })
         //}
 

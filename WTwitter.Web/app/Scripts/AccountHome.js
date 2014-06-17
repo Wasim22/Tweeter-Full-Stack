@@ -3,8 +3,10 @@
     // Greet user
     var Greet = function () {
         var User = JSON.parse(sessionStorage.getItem("0"));
-        $scope.Username = User.FName;
+        document.getElementById('custom').innerHTML += User.FName;
     };
+
+    Greet();
 
     // Display User List
     var DisplayUsers = function () {

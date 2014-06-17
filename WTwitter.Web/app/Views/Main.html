@@ -1,3 +1,19 @@
-﻿<input type="button" value="Log in" ng-click="login()" class="btn-primary" />
-<br />
-<input type="button" value="Sign up" ng-click="signup()" class="btn-primary" />
+﻿<!--<input type="button" value="Log in" ng-click="login()" class="btn-primary btn-lg" style="margin-top:10%" />-->
+
+<div>
+    <span class="well col-lg-4 col-lg-offset-2">
+        <span class="h2">Sign In</span><br />
+        <input type="text" ng-model="username" placeholder="Username" class="textfield" /><br />
+        <input type="password" ng-model="password" placeholder="Password" class="textfield" /><br />
+        <input type="button" value="Sign In" ng-click="Login()" class="btn btn-primary" />
+    </span>
+    <!--<input type="button" value="Sign up" ng-click="signup()" class="btn-lg btn-primary" />-->
+    <span class="well col-lg-4 col-lg-offset-6">
+        <span class="h2">Sign Up</span><br />
+        <input type="text" ng-model="Firstname" placeholder="First name" class="textfield" /><br />
+        <input type="text" ng-model="Lastname" placeholder="Last name" class="textfield" /><br />
+        <input type="text" ng-model="Username" placeholder="Username" class="textfield" /><br />
+        <input type="password" ng-model="Password" placeholder="Password" class="textfield" /><br />
+        <input type="button" value="Sign Up" ng-click="SignupSubmit();" class="btn btn-primary" />
+    </span>
+</div>

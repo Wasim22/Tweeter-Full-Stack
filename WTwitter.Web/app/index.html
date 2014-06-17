@@ -4,12 +4,23 @@
     <title></title>
     
     <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/myStyles.css" rel="stylesheet" />
 </head>
 <body>
-    <div ng-view class="text-center">
+    <div class="container">
+        <div class="navbar" id="nav">
+            <span id="custom"></span>
+            <span class="glyphicon glyphicon-home glyph"></span>
+            <span class="glyphicon glyphicon-comment glyph"></span>
+            <span class="glyphicon glyphicon-wrench glyph"></span>
+            <span class="glyphicon glyphicon-tasks glyph"></span>
+            <center><h3><span class="title">Tweeter</span></h3></center>
+        </div>
+        <div ng-view class="text-center">
 
+
+        </div>
     </div>
-    
 
 
 
@@ -24,7 +35,7 @@
 
     <script src="Scripts/MainController.js"></script> 
     <script src="Scripts/LoginPageController.js"></script>
-    <script src="Scripts/SignUpPageController.js"></script>
+    <!--<script src="Scripts/SignUpPageController.js"></script>-->
     <script src="Scripts/AccountHome.js"></script>
 </body>
 </html>
