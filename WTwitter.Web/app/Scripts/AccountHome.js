@@ -26,6 +26,9 @@
             FollowId: Id
         };
         $http({ method: "POST", url: "/api/v1/Follow", data: followObj })
+
+        document.getElementById(Id).setAttribute("class", "btn-primary btn-xs");
+        document.getElementById(Id).setAttribute("value", "Following");
     };
 
 

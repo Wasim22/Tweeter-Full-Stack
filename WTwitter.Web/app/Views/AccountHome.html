@@ -5,11 +5,11 @@
 
 <!--Display User List-->
 <div class="navbar-left">
-    <input type="text" placeholder="Search Users" /><span class="glyphicon glyphicon-search"></span><br />
-    <span ng-repeat="User in Users" class="users">
+    <span class="glyphicon glyphicon-search"></span><input type="text" placeholder="Search Users" class="form-control" ng-model="searchText" /><br />
+    <span ng-repeat="User in Users | filter:searchText" class="users">
         {{User.Username}}
-        <input type="button" value="Follow" class="btn-success btn-xs" ng-click="Follow(User.Id)" /><br /><br />
-    </span>
+        <input type="button" value="Follow" class="btn-xs btn-success" ng-click="Follow(User.Id)" id="{{User.Id}}" /><br /><br />
+</span>
 </div>
 
 <div class="navbar-right">
@@ -23,6 +23,6 @@
 <!--Display Tweets-->
 <div>
     <div ng-repeat="Tweet in Tweets" style="width:300px; min-height:50px" class="well container">
-        {{Tweet.Message}}<br />
+        {{Tweet.UserId}} : {{Tweet.Message}}<br />
     </div>
 </div>

@@ -1,5 +1,6 @@
 ﻿body {
-    background: radial-gradient(white, #89d7f1)
+    background: radial-gradient(white, #89d7f1);
+    background-attachment:fixed;
 }
 
 .textfield {
