@@ -1,15 +1,23 @@
-﻿<br />
-<br />
-<textarea cols="30" ng-model="Tweet" placeholder="Write your tweet here" class="well-lg"></textarea>
-<input type="button" ng-click="SubmitTweet()" value="Tweet" class="btn btn-primary" />
-
+﻿
 <!--Display User List-->
-<div class="navbar-left">
-    <span class="glyphicon glyphicon-search"></span><input type="text" placeholder="Search Users" class="form-control" ng-model="searchText" /><br />
+<span class="navbar-left col-md-3">    
+    <span class="right-inner-addon">        
+        <span class="glyphicon glyphicon-search"></span>
+        <input type="text" placeholder="Search Users" class="textfield" ng-model="searchText" size="25" />
+    </span>
+    <br />
     <span ng-repeat="User in Users | filter:searchText" class="users">
         {{User.Username}}
-        <input type="button" value="Follow" class="btn-xs btn-success" ng-click="Follow(User.Id)" id="{{User.Id}}" /><br /><br />
+        <input type="button" value="Follow" class="btn-xs btn-success active" ng-click="Follow(User.Id)" id="{{User.Id}}" /><br /><br />
+    </span>
 </span>
+
+<!--Tweet Box-->
+<div class="col-md-6">
+    <span class="right-inner-addon-twt">
+        <textarea cols="40" ng-model="Tweet" placeholder="Write your tweet here" class="well-lg" id="tweetbox"></textarea>
+        <button ng-click="SubmitTweet()" class="btn btn-primary">Tweet</button>
+    </span>
 </div>
 
 <div class="navbar-right">
@@ -17,11 +25,10 @@
     <!--<span ng-repeat="User in Users">
         {{User.Username}} <input type="button" value="Follow" ng-click="Follow()" /><br />
     </span>-->
-
 </div>
 
 <!--Display Tweets-->
-<div>
+<div class="col-md-6 col-md-offset-2" style="margin-top:40px;position:absolute;padding-top:80px">
     <div ng-repeat="Tweet in Tweets" style="width:300px; min-height:50px" class="well container">
         {{Tweet.UserId}} : {{Tweet.Message}}<br />
     </div>
